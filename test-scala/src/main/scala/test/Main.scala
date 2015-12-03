@@ -1,8 +1,9 @@
 package test
 
-import java.awt.{Graphics, Polygon, Dimension}
-import java.awt.event.{WindowEvent, WindowAdapter, WindowListener}
+import java.awt._
 import javax.swing.JFrame
+
+import scala.collection.LinearSeq
 
 /**
  * Created by Silent on 15.11.2015.
@@ -26,28 +27,28 @@ object Main {
 //    println(af.apply("input"))
 //    service.doScalaF(af)
 
-//    val partialFunctionSource = (a: Int, b: Int) => Math.pow(a, b)
-//    val partialFunction = partialFunctionSource(2,_:Int)
-//    var i:Int = 42
-//    println("qqq "+partialFunction(i))
-//    for (i <- 0 to 10) {
-//      println(partialFunction(i))
-//    }
-//    println("qqq "+partialFunction(i))
-
-//    hierarchicalOut("qwerty")
-
-    var frame:Frame = new Frame(200,100)
+    val frame: Frame = new Frame(200, 100)
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE)
     frame.setPreferredSize(new Dimension(600, 400))
     frame.pack()
-    val xs: Array[Int] = Array(5,4,3,2,1)
-    val ys: Array[Int] = Array(1,5,2,4,3)
     frame.setVisible(true)
+
+    val points: Seq[Point] = LinearSeq[Point](new Point(100,200), new Point(3,4))
+
+//    val jp: JPanel = new JPanel() {
+//      var g2: Graphics2D = null
+//      override def printComponent(g: Graphics) {
+//        super.printComponent(g)
+//        g2 = (Graphics2D) g
+//      }
+//    }
     val g: Graphics = frame.getContentPane.getGraphics
-    g.drawPolygon(new Polygon(xs,ys,5))
+    g.setColor(Color.black)
+    points.foreach(p => g.drawLine(-p.x, -p.y, p.x, p.y))
+//    g.drawPolygon(new Polygon(xs,ys,5))
     println(frame.getWidth)
     println(frame.getHeight)
     frame.foo()
+
   }
 }
