@@ -17,7 +17,15 @@ object Main {
     hierarchicalOut(arg.substring(1))
   }
 
+  def getN[T](list: scala.List[T], index: Int): T = list(index)
+
   def main(args: Array[String]) {
+    println(getN(3 :: 2 :: 1 :: Nil, 0))
+    var a: Int = 2
+    a match {
+      case (1 | 2) => println("1 or 2")
+      case _ => println("not > 2")
+    }
     println(new Rational(3, 4).add(new Rational(2)))
     println(new Rational(2) - new Rational(5))
     println(new Rational(3, 4) add new Rational(2) - new Rational(5))
