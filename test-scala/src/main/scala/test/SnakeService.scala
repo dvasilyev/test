@@ -3,17 +3,18 @@ package test
 import java.util.concurrent.TimeUnit
 
 import snake.Snake
+import ui.SFrame
 
 /**
  * Created by Dmitry on 17.01.2016.
  */
 object SnakeService {
 
-  def add(frame: EFrame, cells: List[ECell]) = {
+  def add(frame: SFrame, cells: List[ECell]) = {
     cells.foreach(cell => frame.add(cell))
   }
 
-  def run(frame: EFrame) = {
+  def run(frame: SFrame) = {
     val snake = new Snake(14, 3, 2)
     frame.add(snake)
     new Thread(new Runnable {
