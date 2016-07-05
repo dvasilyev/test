@@ -19,7 +19,6 @@ class Snake(length: Int, x: Int, y: Int) extends AbstractEObject {
   }
   var elements: List[SnakePart] = {
     var out: List[SnakePart] = List()
-    var i = 0
     for (i <- 0 until length) {
       out = new SnakePart(i, x, y) :: out
     }
