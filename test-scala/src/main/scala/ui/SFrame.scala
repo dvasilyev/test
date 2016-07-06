@@ -5,7 +5,8 @@ import java.awt.{Color, Dimension, Graphics2D}
 import java.util.concurrent.TimeUnit
 import javax.swing.JFrame
 
-import test.{EGraphics, EObject}
+import graphics.{EGraphics, EObject}
+import test.EObject
 
 /**
   * @author Dmitry Vasilyev.

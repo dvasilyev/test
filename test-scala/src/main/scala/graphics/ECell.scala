@@ -1,4 +1,4 @@
-package test
+package graphics
 
 /**
   * @author Dmitry Vasilyev.

@@ -1,6 +1,6 @@
 package ui
 
-import test.SnakeService
+import snake.SnakeService
 
 /**
   * @author Dmitry Vasilyev.

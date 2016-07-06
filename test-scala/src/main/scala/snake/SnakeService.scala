@@ -1,8 +1,8 @@
-package test
+package snake
 
 import java.util.concurrent.TimeUnit
 
-import snake.Snake
+import graphics.ECell
 import ui.SFrame
 
 /**

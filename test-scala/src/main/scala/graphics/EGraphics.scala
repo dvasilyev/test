@@ -1,4 +1,4 @@
-package test
+package graphics
 
 import java.awt.{Color, Graphics}
 

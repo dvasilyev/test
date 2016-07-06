@@ -1,6 +1,7 @@
 package snake
 
-import test.{EGraphics, AbstractEObject}
+import graphics.{AbstractEObject, EGraphics}
+import test.EGraphics
 
 /**
  * Created by Dmitry on 17.01.2016.
